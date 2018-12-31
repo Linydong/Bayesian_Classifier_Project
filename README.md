@@ -24,6 +24,8 @@ When you use git for the first time, you need to set up your email and name. To 
 	git config --global user.name "John Doe"
 ```
 
+From this point on, you need to run another command line window **inside** the repo folder. 
+
 To let git know that you have changed your code, in the command line window, run
 ```
 	git add *
@@ -36,3 +38,10 @@ Then, we can push the change to the remote repo so that everyone can see
 ```
 	git push origin master
 ```
+
+## How to Catch Up With the Remote Repo?
+If the remote repository is updated, and you haven't done any incompatible modifications locally, you can run
+```
+	git pull origin master
+```
+
