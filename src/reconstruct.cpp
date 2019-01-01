@@ -226,7 +226,7 @@ void ShowStat(const NaiveBayes &para, const vector<string> &invLabelMap, const v
 
 int main() {
 
-	auto train = Input("Iristrain.txt");
+	auto train = Input("Iristraindata.txt");
 	auto labelMap = GetLabelMap(train);
 
 	numClass = labelMap.size();
@@ -236,7 +236,7 @@ int main() {
 
 	auto para = FitNaiveBayes(train);
 
-	auto test = Input("Iristest.txt");
+	auto test = Input("Iristestdata.txt");
 	AssignLabel(labelMap, test);
 
 	vector<string> invLabelMap;
@@ -249,6 +249,8 @@ int main() {
 	ShowStat(para, invLabelMap, train);
 	cout << "testing set:\n";
 	ShowStat(para, invLabelMap, test);
+
+	system("pause");
 
 	return 0;
 }
